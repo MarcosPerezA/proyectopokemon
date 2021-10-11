@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="909d7c70-932e-4845-b35e-1738629640da">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="color" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="id_pokemon" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="usuario" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT * FROM test.pokemon
+where id in(
+SELECT pokemon_id FROM test.tb_favoritos where usuario=$P!{usuario}
+)]]>
+	</queryString>
+	<field name="id" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="name" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="forme_name" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="forme_base_pokemon_id" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="generation_id" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="evolution_chain_id" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="evolution_parent_pokemon_id" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="evolution_method_id" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="evolution_parameter" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="height" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="weight" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="species" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="color" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="pokemon_shape_id" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="habitat" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="gender_rate" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="capture_rate" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="base_experience" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="base_happiness" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="gen1_internal_id" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="is_baby" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="has_gen4_fem_sprite" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="has_gen4_fem_back_sprite" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="157" y="35" width="240" height="20" uuid="a1aa7d37-0751-4df9-a327-d2dbfe65489b"/>
+				<textElement textAlignment="Center">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[REPORTE DE POKEMONES]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="47" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement x="17" y="22" width="36" height="20" uuid="cd57fe42-1148-492a-86e7-cb95d7ffbf88"/>
+				<text><![CDATA[id]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="69" y="22" width="75" height="20" uuid="000a004f-7f49-4a28-a692-f083e325c4bc"/>
+				<text><![CDATA[name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="310" y="22" width="61" height="20" uuid="ad10e394-c619-4984-98a0-7570bbb08198"/>
+				<text><![CDATA[color]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="240" y="22" width="60" height="20" uuid="9d5f3c74-f90c-41ce-b2f4-9b46e21ce065"/>
+				<text><![CDATA[species]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="157" y="22" width="66" height="20" uuid="16312d61-c221-4099-b0f7-a2a2cf187e14"/>
+				<text><![CDATA[habitat]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="383" y="22" width="103" height="20" uuid="0a6f0b66-039b-4295-84ce-d7b0df0c0e9a"/>
+				<text><![CDATA[base_experience]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch">
+			<textField>
+				<reportElement x="17" y="16" width="36" height="20" uuid="5c8b9af3-cda5-4075-bbad-7c19f0811ddf"/>
+				<textFieldExpression><![CDATA[$F{id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="69" y="16" width="75" height="20" uuid="ee6cc984-1a3e-44fe-a423-c3539fb9d6e3"/>
+				<textFieldExpression><![CDATA[$F{name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="310" y="16" width="61" height="20" uuid="68e2299d-3548-4a4e-93e6-781faf14abed"/>
+				<textFieldExpression><![CDATA[$F{color}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="240" y="16" width="60" height="20" uuid="f3ae2864-2145-4be3-a871-edd34d7d0c19"/>
+				<textFieldExpression><![CDATA[$F{species}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="157" y="16" width="66" height="20" uuid="44d6070a-0130-439d-9762-7e2f61b613c3"/>
+				<textFieldExpression><![CDATA[$F{habitat}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="383" y="16" width="103" height="20" uuid="9172b87b-b29f-40c8-9c2e-35bb5aea2bdb"/>
+				<textFieldExpression><![CDATA[$F{base_experience}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch">
+			<textField>
+				<reportElement x="404" y="33" width="100" height="20" uuid="cf1e3796-09c2-4abb-b839-8547c6e45421"/>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
